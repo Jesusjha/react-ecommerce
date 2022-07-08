@@ -1,6 +1,5 @@
 import './Product.css';
 import { useState } from 'react';
-import { Button } from '@mui/material';
 
 const Product = ({ title, price, image, size }) => {
 	const [amount, setAmount] = useState(0);
@@ -23,12 +22,12 @@ const Product = ({ title, price, image, size }) => {
 					<p className='product__size'>SIZE{size}</p>
 					<button className='product__button'>Add Cart</button>
 					<p>Amount:{amount}</p>
-					<Button variant='outlined' onClick={decrement}>
+					<button variant='outlined' onClick={decrement}>
 						-
-					</Button>
-					<Button variant='outlined' onClick={increment}>
+					</button>
+					<button variant='outlined' onClick={increment}>
 						+
-					</Button>
+					</button>
 				</div>
 			</section>
 		</section>
