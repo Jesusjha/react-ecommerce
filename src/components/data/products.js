@@ -24,7 +24,7 @@ const products = [
 	},
 	{
 		id: 3,
-		title: 'Konig Lockout',
+		title: 'Konig Lockout Black',
 		price: 350,
 		size: '15X7 ET38 4X100 C73.1',
 		img: rim_03,
@@ -52,7 +52,7 @@ const products = [
 	},
 	{
 		id: 7,
-		title: 'Konig FlowFormed Freeform',
+		title: 'Konig FlowFormed',
 		price: 477,
 		size: '15X7.5 ET35 4X100 C73.1',
 		img: rim_07,

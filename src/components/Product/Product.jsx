@@ -1,8 +1,9 @@
 import './Product.css';
-import { useState } from 'react';
+import { Card, Button, Col, Grid, Row, Text } from '@nextui-org/react';
+// import { useState } from 'react';
 
 const Product = ({ title, price, image, size }) => {
-	const [amount, setAmount] = useState(0);
+	/* const [amount, setAmount] = useState(0);
 
 	const increment = () => {
 		setAmount(amount + 1);
@@ -10,9 +11,9 @@ const Product = ({ title, price, image, size }) => {
 	const decrement = () => {
 		if (amount === 0) return;
 		setAmount(amount - 1);
-	};
+	}; */
 
-	return (
+	/* 	return (
 		<section className='product__grid'>
 			<section>
 				<div className='product__container'>
@@ -31,6 +32,31 @@ const Product = ({ title, price, image, size }) => {
 				</div>
 			</section>
 		</section>
+	);
+}; */
+	return (
+		<Card isPressable css={{cursor:'default'}}>
+			<Card.Body css={{ p: 0 }}>
+				<Card.Image
+					src={image}
+					objetFit='cover'
+					width={200}
+					height={200}
+					alt={title}
+				/>
+			</Card.Body>
+			<Card.Footer css={{ backgroundColor:'$accents9' }}>
+				<Col css={{display:'flex', justifyContent:'flex-start', flexDirection:'column' }}>
+					<Text b css={{color:'$accents3'}}>{title}</Text>
+					<Text css={{ color: "$accents6", fontWeight: "$semibold", fontSize: "$sm" }}>{price}.00€/u.</Text>
+				</Col>
+				<Col css={{display:'flex', justifyContent:'flex-end'}}>
+					<Button size='xs' ghost color='error' auto>
+						ADD CART
+					</Button>
+				</Col>
+			</Card.Footer>
+		</Card>
 	);
 };
 
