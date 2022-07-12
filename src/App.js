@@ -8,7 +8,7 @@ function App() {
 	return (
 		<>
 			<Header />
-			<Grid.Container gap={2} justify='center'>
+			<Grid.Container justify='center'>
 				<Grid xs={8}>
 					<Main />
 				</Grid>
