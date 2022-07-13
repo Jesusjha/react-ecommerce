@@ -12,7 +12,7 @@ function App() {
 		<>
 		<BrowserRouter>
 			<Header/>
-			<Router/>
+			<Router>
 			<Grid.Container justify='center'>
 				<Grid xs={7}>
 					<Main />
@@ -21,6 +21,7 @@ function App() {
 					<Cart />
 				</Grid>
 			</Grid.Container>
+			</Router>
 			</BrowserRouter>
 		</>
 	);

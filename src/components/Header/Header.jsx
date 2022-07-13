@@ -10,29 +10,19 @@ function Header() {
 					<Card.Body>
 						<Row>
 							<Col>
-								<Link to='/'>
-                LOGOTYPE
-								</Link>
+								<Link to='/'>LOGOTYPE</Link>
 							</Col>
 							<Col>
-								<Link to='/'>
-									Home
-								</Link>
+								<Link to='/'>Home</Link>
 							</Col>
 							<Col>
-								<Link to='/Categories'>
-									Categories
-								</Link>
+								<Link to='/categories'>Categories</Link>
 							</Col>
 							<Col>
-								<Link to='/Contact'>
-									Contact Us
-								</Link>
+								<Link to='/contact'>Contact Us</Link>
 							</Col>
 							<Col>
-								<Link to='Login'>
-									Login
-								</Link>
+								<Link to='login'>Login</Link>
 							</Col>
 						</Row>
 					</Card.Body>
