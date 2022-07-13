@@ -42,10 +42,7 @@ const [amount, setAmount] = useState(0);
 						</Text>
 					</Col>
 					<Col css={{ display: 'flex', justifyContent: 'flex-end' }}>
-						<Button size='xs' ghost color='error' auto>
-							{' '}
-							ADD CART{' '}
-						</Button>
+						<Button size='xs' ghost color='error' auto>{' '}ADD CART{' '}</Button>
 					</Col>
 					<Col>
 						<Text color="warning">

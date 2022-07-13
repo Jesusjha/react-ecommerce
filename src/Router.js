@@ -1,4 +1,4 @@
-import {Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
@@ -8,23 +8,19 @@ import Categories from "./components/Categories/Categories";
 
 
 
-function router() {
+function RouterPath() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-      </Routes>
-      <Routes>
-        <Route path="/login" element={<Login/>} />
-      </Routes>
-      <Routes>
-        <Route path="/contact" element={<Contact/>} />
-      </Routes>
-      <Routes>
-        <Route path="/categories" element={<Categories/>} />
-      </Routes>
+        <Routes>
+          <Route path="/login" element={<Login/>} />
+        </Routes>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/contact" element={<Contact/>} />
+          <Route path="/categories" element={<Categories/>} />
+        </Routes>
       </>
   )
 }
 
-export default router
+export default RouterPath
