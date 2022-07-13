@@ -4,7 +4,6 @@ import CartItem from '../CartItem/CartItem';
 
 function Cart() {
 	return (
-		<>
 			<Container fluid>
         <Spacer y={0.7}/>
 				<Card css={{ $$cardColor: '$color$primary' }}>
@@ -25,7 +24,6 @@ function Cart() {
 					</Card>
 				</Card>
 			</Container>
-		</>
 	);
 }
 

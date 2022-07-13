@@ -9,9 +9,8 @@ function Main() {
 		<Grid.Container gap={2} justify="flex-start"> {/* NextUI Grid container */}
 			{products.map((rim) => {
 				return (
-					<Grid xs={6} sm={3}> {/* NextUI responsive grid */}
+					<Grid key={rim.id} xs={6} sm={3}> {/* NextUI responsive grid */}
 					<Product
-						key={rim.id}
 						title={rim.title}
 						price={rim.price}
 						image={rim.img}
