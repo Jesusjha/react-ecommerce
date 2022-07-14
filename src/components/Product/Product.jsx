@@ -1,18 +1,10 @@
 import './Product.css';
-import { Card, Button, Col, Text } from '@nextui-org/react';
-import { useState } from 'react';
+import { Card, /* Button */ Col, Text } from '@nextui-org/react';
+import BtnAddCart from '../BtnAddCart/BtnAddCart';
+import CounterBtn from '../CounterBtn/CounterBtn';
 
 const Product = ({ title, price, image, size }) => {
 	
-const [amount, setAmount] = useState(0);
-
-	const increment = () => {
-		setAmount(amount + 1);
-	};
-	const decrement = () => {
-		if (amount === 0) return;
-		setAmount(amount - 1);
-	};
 
 	return (
 		<>
@@ -42,16 +34,10 @@ const [amount, setAmount] = useState(0);
 						</Text>
 					</Col>
 					<Col css={{ display: 'flex', justifyContent: 'flex-end' }}>
-						<Button size='xs' ghost color='error' auto>{' '}ADD CART{' '}</Button>
+						<BtnAddCart/>
 					</Col>
 					<Col>
-						<Text color="warning">
-						Amount:{ amount}
-						</Text>
-						<Button.Group color='secondary' size='xs'>
-							<Button variant='outlined' onClick={decrement}>-</Button>
-							<Button variant='outlined' onClick={increment}>+</Button>
-						</Button.Group>
+							<CounterBtn/>
 					</Col>
 				</Card.Footer>
 			</Card>
