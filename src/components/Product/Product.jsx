@@ -1,7 +1,7 @@
 import './Product.css';
-import { Card, /* Button */ Col, Text } from '@nextui-org/react';
+import { Card, Col, Text } from '@nextui-org/react';
 import BtnAddCart from '../BtnAddCart/BtnAddCart';
-import CounterBtn from '../CounterBtn/CounterBtn';
+import PriceProductCard from '../PriceProductCard/PriceProductCard'
 
 const Product = ({ title, price, image, size }) => {
 	
@@ -23,21 +23,10 @@ const Product = ({ title, price, image, size }) => {
 						<Text b css={{ color: '$accents3' }}>
 							{title}
 						</Text>
-						<Text
-							css={{
-								color: '$accents6',
-								fontWeight: '$semibold',
-								fontSize: '$sm',
-							}}
-						>
-							{price}.00€/u.
-						</Text>
+						<PriceProductCard price={price}/>
 					</Col>
 					<Col css={{ display: 'flex', justifyContent: 'flex-end' }}>
 						<BtnAddCart/>
-					</Col>
-					<Col>
-							<CounterBtn/>
 					</Col>
 				</Card.Footer>
 			</Card>
