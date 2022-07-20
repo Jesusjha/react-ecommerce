@@ -1,30 +1,44 @@
 import './Cart.css';
 import { Container, Spacer, Row, Button, Card, Text } from '@nextui-org/react';
-import CartItem from '../CartItem/CartItem';
+import CartTable from '../CartTable/CartTable';
 
-function Cart() {
+
+const Cart = ({ cart, setCart }) => {
+
+	
+	console.log(cart);
+
+	const emptyTable = cart.length === 0 && <p>Cart is empty</p>;
+	const renderTable = cart.length >= 1 && <CartTable cart={cart}/>;
+
 	return (
-			<Container fluid>
-        <Spacer y={0.7}/>
-				<Card css={{ $$cardColor: '$color$primary' }}>
-					<Card>
-						<Card.Header css={{backgroundColor:'$accents9'}}>
-							<Text css={{color:'$accents2'}} b>Cart Items</Text>
-						</Card.Header>
-						<Card.Divider />
-						<Card.Body>
-							<CartItem />
-						</Card.Body>
-						<Card.Divider />
-						<Card.Footer css={{backgroundColor:'$accents9'}}>
-							<Row justify='flex-end'>
-								<Button auto color='error' size='sm'>Continue</Button>
-							</Row>
-						</Card.Footer>
-					</Card>
-				</Card>
+
+		<Container>
+			<Spacer y={1} />
+			<Card justify='center'>
+				<Card.Header css={{ backgroundColor: '$accents9' }}>
+					<Row justify='center'>
+						<Text css={{ color: '$accents2' }} b>
+							Cart Items
+						</Text>
+					</Row>
+				</Card.Header>
+				<Card.Body>
+				
+					{emptyTable}
+					{renderTable}
+				
+				</Card.Body>
+				<Card.Footer css={{ backgroundColor: '$accents9' }}>
+					<Row justify='flex-end'>
+						<Button size='sm' color='error'>
+							Check Out
+						</Button>
+					</Row>
+				</Card.Footer>
+			</Card>
 			</Container>
 	);
-}
+};
 
 export default Cart;

@@ -3,18 +3,21 @@ import Product from '../Product/Product';
 import './Main.css';
 import {Grid} from "@nextui-org/react";
 
-function Main() {
+const Main = ({ cart, setCart }) => {
 	return (
 		<main>
 		<Grid.Container gap={2} justify="flex-start"> {/* NextUI Grid container */}
-			{products.map((rim) => {
+			{products.map(({id, title, price, img, size}) => {
 				return (
-					<Grid key={rim.id} xs={6} sm={3}> {/* NextUI responsive grid */}
+					<Grid key={id} xs={7} sm={4}> {/* NextUI responsive grid */}
 					<Product
-						title={rim.title}
-						price={rim.price}
-						image={rim.img}
-						size={rim.size}
+						id={id}
+						title={title}
+						price={price}
+						image={img}
+						size={size}
+						cart={cart}
+						setCart={setCart}
 					/>
 					</Grid>
 				);

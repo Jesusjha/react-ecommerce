@@ -1,11 +1,15 @@
 import './Product.css';
 import { Card, Col, Text } from '@nextui-org/react';
 import BtnAddCart from '../BtnAddCart/BtnAddCart';
-import PriceProductCard from '../PriceProductCard/PriceProductCard'
+import PriceProductCard from '../PriceProductCard/PriceProductCard';
 
-const Product = ({ title, price, image, size }) => {
+const Product = ({ id, title, price, image, cart, setCart }) => {
 	
+	const addProduct = () => {
 
+		setCart([...cart, { id, image, title, price }]);
+	};
+	
 	return (
 		<>
 			<Card isPressable css={{ cursor: 'default' }}>
@@ -21,12 +25,13 @@ const Product = ({ title, price, image, size }) => {
 						}}
 					>
 						<Text b css={{ color: '$accents3' }}>
-							{title}
+							{' '}
+							{title}{' '}
 						</Text>
-						<PriceProductCard price={price}/>
+						<PriceProductCard price={price} />
 					</Col>
 					<Col css={{ display: 'flex', justifyContent: 'flex-end' }}>
-						<BtnAddCart/>
+						<BtnAddCart addProduct={addProduct} />
 					</Col>
 				</Card.Footer>
 			</Card>

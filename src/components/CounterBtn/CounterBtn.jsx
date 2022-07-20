@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button, Text } from '@nextui-org/react';
 
 function CounterBtn() {
-	const [amount, setAmount] = useState(0);
+	const [amount, setAmount] = useState(1);
 
 	const increment = () => {
 		setAmount(amount + 1);
@@ -14,14 +14,17 @@ function CounterBtn() {
 
 	return (
 		<>
-			<Text color='warning'>Amount:{amount}</Text>
-			<Button.Group color='secondary' size='xs'>
+			<Button.Group color='error' size='xs'>
 				<Button variant='outlined' onClick={decrement}>
 					-
 				</Button>
 				<Button variant='outlined' onClick={increment}>
 					+
 				</Button>
+				<Button bordered>
+				{amount}
+				</Button>
+			{/* <Text color='warning'>{amount}</Text> */}
 			</Button.Group>
 		</>
 	);

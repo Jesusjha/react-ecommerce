@@ -10,28 +10,28 @@ import rim_08 from '../../assets/img/rim_08.png';
 const products = [
 	{
 		id: 1,
-		title: 'RAYS Volk Racing TE37 SL',
+		title: 'RAYS Volk TE37',
 		price: 995,
 		size: '17X7.5 +40 5X114.3',
 		img: rim_01,
 	},
 	{
 		id: 2,
-		title: 'ENKEI Tuning Series TS-5',
+		title: 'ENKEI TS-5',
 		price: 428,
 		size: '17X8 +40 5X114.3 72.6 F',
 		img: rim_02,
 	},
 	{
 		id: 3,
-		title: 'Konig Lockout Black',
+		title: 'Konig Lockout',
 		price: 350,
 		size: '15X7 ET38 4X100 C73.1',
 		img: rim_03,
 	},
 	{
 		id: 4,
-		title: 'Motegi MR137 Hyper Silver',
+		title: 'Motegi MR137',
 		price: 187,
 		size: '17X8.5 ET35 5X112 CB66.56',
 		img: rim_04,
@@ -45,7 +45,7 @@ const products = [
 	},
 	{
 		id: 6,
-		title: 'RAYS Volk Racing TE37',
+		title: 'RAYS Volk TE37',
 		price: 718,
 		size: '15X7.0 +35 5X100',
 		img: rim_06,
@@ -59,7 +59,7 @@ const products = [
 	},
 	{
 		id: 8,
-		title: 'ENKEI Tuning Series TSR-6',
+		title: 'ENKEI TSR-6',
 		price: 489,
 		size: '18X8 +45 5X112 72.6 F',
 		img: rim_08,
