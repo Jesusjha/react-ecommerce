@@ -19,10 +19,10 @@ function Header() {
 								<Link to='/categories'>Categories</Link>
 							</Col>
 							<Col>
-								<Link to='/contact'>Contact Us</Link>
+								<Link to='help'>Help</Link>
 							</Col>
 							<Col>
-								<Link to='login'>Login</Link>
+								<Link to='/contact'>Contact Us</Link>
 							</Col>
 						</Row>
 					</Card.Body>

@@ -5,7 +5,7 @@ import CounterBtn from '../CounterBtn/CounterBtn'
 const CartTable = ({cart}) => {
   return (
 
-    <Table>
+    <Table aria-label='products on the shopping cart'>
 					<Table.Header>
 						<Table.Column>Prod.</Table.Column>
 						<Table.Column>Name</Table.Column>

@@ -13,6 +13,7 @@ function LoginForm() {
               color="primary"
               size="lg"
               placeholder="Email"
+              aria-label='email'
               contentLeft={<Mail fill="currentColor" />}
             />
  
@@ -24,6 +25,7 @@ function LoginForm() {
             color="primary"
             size="lg"
             placeholder="Password"
+            aria-label='password'
             contentLeft={<Password fill="currentColor" />}
           />
     </>
