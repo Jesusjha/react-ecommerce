@@ -1,15 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Grid } from '@nextui-org/react';
 import Main from '../Main/Main';
 import Cart from '../Cart/Cart';
 import Login from '../Login/Login';
 
+const storageProduct = JSON.parse(localStorage.getItem('product')) || [];
 
 function Home() {
 
-	const [cart, setCart] = useState([]);
+	const [cart, setCart] = useState(storageProduct);
 
-  
+	useEffect(() => {
+		console.log('Guardando producto en carrito')
+		localStorage.setItem('product', JSON.stringify(cart))
+	}, [cart])
+	
 	return (
     <>
       <Grid.Container justify='center'>
