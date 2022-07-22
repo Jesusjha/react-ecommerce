@@ -11,7 +11,7 @@ function Home() {
 	const [cart, setCart] = useState(storageProduct);
 
 	useEffect(() => {
-		console.log('Guardando producto en carrito')
+		// console.log('Guardando producto en carrito')
 		localStorage.setItem('product', JSON.stringify(cart))
 	}, [cart])
 	

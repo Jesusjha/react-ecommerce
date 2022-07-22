@@ -4,12 +4,27 @@ import BtnAddCart from '../BtnAddCart/BtnAddCart';
 import PriceProductCard from '../PriceProductCard/PriceProductCard';
 
 const Product = ({ id, title, price, image, cart, setCart }) => {
-	
 	const addProduct = () => {
-
 		setCart([...cart, { id, image, title, price }]);
-	};
-	
+
+		const productExist = cart.find((item) => item.id === id);
+
+		console.log(productExist);
+
+		if (productExist) {
+			setCart(
+				cart.map(( element ) => 
+				
+					element.id === id ? {...element, qty: element.qty + 1} : element));
+					
+		} else {
+			setCart([
+				...cart,
+				{ title: title, price: price, image: image, id: id, qty: 1 },
+			]);
+		}
+};
+
 	return (
 		<>
 			<Card isPressable css={{ cursor: 'default' }}>
